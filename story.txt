@@ -1,0 +1,152 @@
+"> from Portland get XOXO" by Philip James
+
+Include Basic Screen Effects by Emily Short.
+Include Rideable Vehicles by Graham Nelson.
+
+Test app with "x laptop / x twitter / x hackernews / get twitter / y / go through white door / x Application / get Application / y / go through green door  "
+
+The Hidden Inventory is a room. There is a Conference Pass in the Hidden Inventory. There is a Festival Pass in the Hidden Inventory. 
+
+Section 1 - The Application
+
+When play begins:
+	say "Welcome to the text adventure version of XOXO 2014. This was lovingly crafted by Philip James, who is quite obviously insane. There are probably lots of rough edges. In fact, I know there are lots of rough edges. I welcome you to make any changes or improvements you wish: 
+
+Office is a room. "You're sitting in your office, staring at your laptop. Your mind is wandering. You wonder if you should check Hackernews or Twitter."
+
+In the Office is a container called your laptop.  In the your laptop are Hackernews and Twitter. The description of the your laptop is "Your laptop is on, browser open."
+
+The description of the Hackernews is "A small rounded cube. You hear the screams of a thousand dying startups." 
+
+The description of the Twitter is "A small rounded cube. You hear the tweeting of ten million angsty birds." 
+
+The player is in the Office.
+
+The Registration is a room. The white door is north of the Office. Through the white door is the Registration. The white door is a door. The white door is lockable and locked. The white door is closed.
+
+Instead of taking the your laptop:
+	say "Your laptop is charging, you don't want to move it.";
+
+Instead of taking the Twitter:
+	say "There's a tweet from @xoxo. Registration has opened for XOXO 2014.";
+	say "Go to the registration? (y/n)";
+	if the player consents:
+		now the white door is unlocked;
+		now the white door is open;
+		say "You're not sure you remember the white door to the North of the room being there before, but now it is open, and inviting.";
+	otherwise:
+		say "Maybe next year";
+		end the story finally;
+
+Instead of taking the Hackernews: 
+	say "There's a blog post from XOXO. Registration has opened for XOXO 2014.";
+	say "Go to the registration? (y/n)";
+	if the player consents:
+		now the white door is unlocked;
+		now the white door is open;
+		say "You're not sure you remember the white door to the North of the room being there before, but now it is open, and inviting.";
+	otherwise:
+		say "Maybe next year";
+		end the story finally;
+		
+The description of the Registration is "You seem to have stepped through a doorway into the XOXO website. White space and artisanal javascript swirls around you. You have a sudden desire to trade your laptop in for a typewriter. The swirl of text condenses, and the XOXO registration application presents itself in front of you." In the Registration is the Application. The description of the Application is "Such a simple form, and yet such complexity in the depth of its questions! Surely you must study it further. Get the Application."
+
+Waiting for Application is a room. "You return to your life, waiting to hear whether or not your application is accepted." 
+
+The green door is a door. The green door is south of the Registration. Through the green door is the Waiting for Application. The green door is closed. The green door is lockable and locked. 
+
+Instead of taking the Application:
+	say "A voice like two men speaking in unison says 'Would you like to apply for XOXO 2014?' One of them sounds Irish, you think.(y/n)";
+	if the player consents:
+		say "Your mind reels as your innermost being is condensed into a handful of questions. Dazed, you submit the now-complete Application.";
+		now the green door is unlocked;
+		now the green door is open;
+		say "The green door behind you is now open! You may leave this place.";
+	otherwise:
+		say "'Unfortunately, there is no going back from this place. You are now doomed to power our website forever!'";
+		end the story finally;
+
+After going to the Waiting for Application:
+	say "The days pass as you wait. (Press any key to continue).";
+	wait for any key;
+	if a random chance of 3 in 4 succeeds:
+		if a random chance of 3 in 4 succeeds:
+			say "Congratulations! You've been granted a conference pass. (Press any key to continue)";
+			move the Conference Pass to player;
+			wait for any key;
+			clear screen;
+			move the player to the XOXO Planning;
+		otherwise:
+			say "Congratulations! You've been granted a festival pass. (Press any key to continue)";
+			move the Festival Pass to player;
+			wait for any key;
+			clear screen;
+			move the player to the XOXO Planning;
+	otherwise:
+		say "There were a lot of great applicants, and unfortunately you were not one of them. Try again next year!";
+		end the story finally;
+		
+Section 2 - Getting to Portland
+
+test travel with "get in car / nw / get out"
+
+XOXO Planning is a room. "Time to start planning for XOXO! You need to pick how you're traveling, of course. Maybe you should also check the discussion online. You can get to Downtown Portland by car (NW), Portland Station by train (N), and PDX by plane (NE)."
+
+There is a computer in the XOXO Planning. The description of the computer is "One of them new-fangled picture boxes will let you see what people are talking about."
+
+Portland is a region. 
+
+Downtown Portland is a room. Downtown Portland is in Portland. "'Ah, it's good to be back.' You say this whether or not you've been to Portland before. To the north is Powell's City of Books (N). To the east is The Redd (E)."
+
+Portland Station is a room. Portland Station is in Portland.  "'Ah, it's good to be back.' You say this whether or not you've been to Portland before. To the southeast is The Redd (SE)."
+
+PDX is a room. PDX is in Portland. 
+
+PDX is northeast of XOXO Planning.
+Downtown Portland is northwest of XOXO Planning.
+Portland Station is north of XOXO Planning.
+
+In the XOXO Planning is a vehicle called car. In the XOXO Planning is a vehicle called plane. In the XOXO Planning is a vehicle called train. 
+
+Instead of going to a room in Portland when the player is not in a vehicle:
+	say "It's a bit too far to walk, choose a method of transportation."
+	
+Instead of going to Downtown Portland when the player is not in a car:
+	say "You can only get to Downtown Portland by car."
+	
+Instead of going to Portland Station when the player is not in a train:
+	say "You can only get to Portland Station by Train."
+	
+Instead of going to PDX when player is not in a plane:
+	say "You can only get to PDX by plane."
+	
+Section 3 - Portland
+
+Powell's is a room. Powell's is north of Downtown Portland.
+
+Portland Station is northeast of Downtown Portland.
+
+The Redd is a region.
+
+The Lot is a room. "The Lot outside The Redd is filled with fantastic people, fantastic food, and furniture that could possibly be described as construction-chic. You grab a coffee or beer from the bar, maybe refill your water bottle, and plan your next move." The Lot is in The Redd. PDX is northeast of The Lot. Portland Station is northwest of The Lot. Downtown Portland is west of The Lot.
+
+The Foundry is a room. The Foundry is in The Redd. The Foundry is east of The Lot. 
+Before entering The Foundry:
+	if the player has a Conference Pass:
+		continue the action;
+	otherwise:
+		say "You need a conference pass. Sorry about that.";
+		stop the action.
+
+Holocene is a room. Holocene is north of The Yale Union.
+
+White Owl Social Club is a room. White Owl Social Club is southeast of The Lot. White Owl Social Club is south of The Foundry.
+
+The Goat Field is a room. The Goat Field is east of The Foundry.
+
+The Yale Union is a room. The Yale Union is north of The Foundry.
+
+	
+				
+
+	
