@@ -11,7 +11,7 @@ The Hidden Inventory is a room. There is a Conference Pass in the Hidden Invento
 Section 1 - The Application
 
 When play begins:
-	say "Welcome to the text adventure version of XOXO 2014. This was lovingly crafted by Philip James, who is quite obviously insane. There are probably lots of rough edges. In fact, I know there are lots of rough edges. I welcome you to make any changes or improvements you wish: https://github.com/phildini/xoxo-adventure."
+	say "Welcome to the text adventure version of XOXO 2014. This was started by Philip James, but (hopefully) improved by the whole community. There are probably lots of rough edges. In fact, I know there are lots of rough edges. I welcome you to make any changes or improvements you wish: https://github.com/phildini/xoxo-adventure."
 
 Office is a room. "You're sitting in your office, staring at your laptop. Your mind is wandering. You wonder if you should check Hackernews or Twitter."
 
