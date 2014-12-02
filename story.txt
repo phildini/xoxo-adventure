@@ -5,12 +5,13 @@ Include Rideable Vehicles by Graham Nelson.
 
 Test app with "x laptop / x twitter / x hackernews / get twitter / y / go through white door / x Application / get Application / y / go through green door  "
 
+
 The Hidden Inventory is a room. There is a Conference Pass in the Hidden Inventory. There is a Festival Pass in the Hidden Inventory. 
 
 Section 1 - The Application
 
 When play begins:
-    say "Welcome to the text adventure version of XOXO 2014. This was lovingly crafted by Philip James, who is quite obviously insane. There are probably lots of rough edges. In fact, I know there are lots of rough edges. I welcome you to make any changes or improvements you wish: https://github.com/phildini/xoxo-adventure"
+	say "Welcome to the text adventure version of XOXO 2014. This was lovingly crafted by Philip James, who is quite obviously insane. There are probably lots of rough edges. In fact, I know there are lots of rough edges. I welcome you to make any changes or improvements you wish: https://github.com/phildini/xoxo-adventure."
 
 Office is a room. "You're sitting in your office, staring at your laptop. Your mind is wandering. You wonder if you should check Hackernews or Twitter."
 
@@ -25,29 +26,29 @@ The player is in the Office.
 The Registration is a room. The white door is north of the Office. Through the white door is the Registration. The white door is a door. "There is a white door here. You don't remember this white door having been in your office before. In fact, you're not sure how you got in your office. In fact, you're note sure if this is your office." The white door is lockable and locked. The white door is closed.
 
 Instead of taking the your laptop:
-    say "Your laptop is charging, you don't want to move it.";
+	say "Your laptop is charging, you don't want to move it.";
 
 Instead of taking the Twitter:
-    say "There's a tweet from @xoxo. Registration has opened for XOXO 2014.";
-    say "Go to the registration? (y/n)";
-    if the player consents:
-        now the white door is unlocked;
-        now the white door is open;
-        say "You're not sure you remember the white door to the North of the room being there before, but now it is open, and inviting.";
-    otherwise:
-        say "Maybe next year";
-        end the story finally;
+	say "There's a tweet from @xoxo. Registration has opened for XOXO 2014.";
+	say "Go to the registration? (y/n)";
+	if the player consents:
+		now the white door is unlocked;
+		now the white door is open;
+		say "You're not sure you remember the white door to the North of the room being there before, but now it is open, and inviting.";
+	otherwise:
+		say "Maybe next year";
+		end the story finally;
 
 Instead of taking the Hackernews: 
-    say "There's a blog post from XOXO. Registration has opened for XOXO 2014.";
-    say "Go to the registration? (y/n)";
-    if the player consents:
-        now the white door is unlocked;
-        now the white door is open;
-        say "You're not sure you remember the white door to the North of the room being there before, but now it is open, and inviting.";
-    otherwise:
-        say "Maybe next year";
-        end the story finally;
+	say "There's a blog post from XOXO. Registration has opened for XOXO 2014.";
+	say "Go to the registration? (y/n)";
+	if the player consents:
+		now the white door is unlocked;
+		now the white door is open;
+		say "You're not sure you remember the white door to the North of the room being there before, but now it is open, and inviting.";
+	otherwise:
+		say "Maybe next year";
+		end the story finally;
 
 The description of the Registration is "You seem to have stepped through a doorway into the XOXO website. White space and artisanal javascript swirls around you. You have a sudden desire to trade your laptop in for a typewriter. The swirl of text condenses, and the XOXO registration application presents itself in front of you." In the Registration is the Application. The description of the Application is "Such a simple form, and yet such complexity in the depth of its questions! Surely you must study it further. Get the Application."
 
@@ -56,43 +57,43 @@ Waiting for Application is a room. "You return to your life, waiting to hear whe
 The green door is a door. The green door is south of the Registration. Through the green door is the Waiting for Application. The green door is closed. The green door is lockable and locked. 
 
 Instead of taking the Application:
-    say "A voice like two men speaking in unison says 'Would you like to apply for XOXO 2014?' One of them sounds Irish, you think.(y/n)";
-    if the player consents:
-        say "Your mind reels as your innermost being is condensed into a handful of questions. Dazed, you submit the now-complete Application.";
-        now the green door is unlocked;
-        now the green door is open;
-        say "The green door behind you is now open! You may leave this place.";
-    otherwise:
-        say "'Unfortunately, there is no going back from this place. You are now doomed to power our website forever!'";
-        end the story finally;
+	say "A voice like two men speaking in unison says 'Would you like to apply for XOXO 2014?' One of them sounds Irish, you think.(y/n)";
+	if the player consents:
+		say "Your mind reels as your innermost being is condensed into a handful of questions. Dazed, you submit the now-complete Application.";
+		now the green door is unlocked;
+		now the green door is open;
+		say "The green door behind you is now open! You may leave this place.";
+	otherwise:
+		say "'Unfortunately, there is no going back from this place. You are now doomed to power our website forever!'";
+		end the story finally;
 
 After going to the Waiting for Application:
-    say "The days pass as you wait. (Press any key to continue).";
-    wait for any key;
-    if a random chance of 3 in 4 succeeds:
-        if a random chance of 3 in 4 succeeds:
-            say "Congratulations! You've been granted a conference pass. (Press any key to continue)";
-            move the Conference Pass to player;
-            wait for any key;
-            clear screen;
-            move the player to the XOXO Planning;
-        otherwise:
-            say "Congratulations! You've been granted a festival pass. (Press any key to continue)";
-            move the Festival Pass to player;
-            wait for any key;
-            clear screen;
-            move the player to the XOXO Planning;
-    otherwise:
-        say "There were a lot of great applicants, and unfortunately you were not one of them. Try again next year!";
-        end the story finally;
-        
+	say "The days pass as you wait. (Press any key to continue).";
+	wait for any key;
+	if a random chance of 4 in 4 succeeds:
+		if a random chance of 4 in 4 succeeds:
+			say "Congratulations! You've been granted a conference pass. (Press any key to continue)";
+			move the Conference Pass to player;
+			wait for any key;
+			clear screen;
+			move the player to the XOXO Travel;
+		otherwise:
+			say "Congratulations! You've been granted a festival pass. (Press any key to continue)";
+			move the Festival Pass to player;
+			wait for any key;
+			clear screen;
+			move the player to the XOXO Travel;
+	otherwise:
+		say "There were a lot of great applicants, and unfortunately you were not one of them. Try again next year!";
+		end the story finally;
+		
 Section 2 - Getting to Portland
 
 test travel with "get in car / nw / get out"
 
-XOXO Planning is a room. "Time to start planning for XOXO! You need to pick how you're traveling, of course. Maybe you should also check the discussion online. You can get to Downtown Portland by car (NW), Portland Station by train (N), and PDX by plane (NE)."
+XOXO Travel is a room. "Time to go. You need to pick how you're traveling, of course. Maybe you should also check the discussion online. You can get to Downtown Portland by car (NW), Portland Station by train (N), and PDX by plane (NE)."
 
-There is a computer in the XOXO Planning. The description of the computer is "One of them new-fangled picture boxes will let you see what people are talking about."
+There is a computer in the XOXO Travel. The description of the computer is "One of them new-fangled picture boxes will let you see what people are talking about."
 
 Portland is a region. 
 
@@ -100,23 +101,23 @@ Downtown Portland is a room. Downtown Portland is in Portland. "'Ah, it's good t
 
 Portland Station is a room. Portland Station is in Portland.  "'Ah, it's good to be back.' You say this whether or not you've been to Portland before. To the southeast is The Redd (SE)."
 
-PDX is a room. PDX is in Portland. 
+PDX is a room. PDX is in Portland. "You arrive at PDX, the air hub for Northern Oregon. As you disembark and head towards the Max stop, you are struck by how clean everything is. 'Ah, it's good to be back.' You say this whether or not you've been to Portland before. To the southwest is The Redd (SW). "
 
-PDX is northeast of XOXO Planning.
-Downtown Portland is northwest of XOXO Planning.
-Portland Station is north of XOXO Planning.
+PDX is northeast of XOXO Travel.
+Downtown Portland is northwest of XOXO Travel.
+Portland Station is north of XOXO Travel.
 
-In the XOXO Planning is a vehicle called car. In the XOXO Planning is a vehicle called plane. In the XOXO Planning is a vehicle called train. 
-    
+In the XOXO Travel is a vehicle called car. In the XOXO Travel is a vehicle called plane. In the XOXO Travel is a vehicle called train. 
+	
 Instead of going to Downtown Portland when the player is not in a car:
-    say "You can only get to Downtown Portland by car."
-    
+	say "You can only get to Downtown Portland by car."
+	
 Instead of going to Portland Station when the player is not in a train:
-    say "You can only get to Portland Station by Train."
-    
+	say "You can only get to Portland Station by Train."
+	
 Instead of going to PDX when player is not in a plane:
-    say "You can only get to PDX by plane."
-    
+	say "You can only get to PDX by plane."
+	
 Section 3 - Portland
 
 Powell's is a room. "Powell's City of Books is as close to heaven as you think exists on Earth. You could stay here forever, but know you have to tear yourself away to return to XOXO." Powell's is north of Downtown Portland. Powell's is in Portland.
@@ -131,28 +132,31 @@ The Lot is southwest of PDX.
 
 The Redd is a region. The Redd is in Portland.
 
-The Lot is a room. "The Lot outside The Redd is filled with fantastic people, fantastic food, and furniture that could possibly be described as construction-chic. You grab a coffee or beer from the bar, maybe refill your water bottle, and plan your next move." The Lot is in The Redd. PDX is northeast of The Lot. Portland Station is northwest of The Lot. Downtown Portland is west of The Lot.
+The Lot is a room. "The Lot outside The Redd is filled with fantastic people, fantastic food, and furniture that could possibly be described as construction-chic. [line break]You grab a coffee or beer from the bar, maybe refill your water bottle, and plan your next move." The Lot is in The Redd. PDX is northeast of The Lot. Portland Station is northwest of The Lot. Downtown Portland is west of The Lot.
 
 After going to The Lot for the first time:
-    try looking;
-    now the time is 7:00 PM;
+	try looking;
+	now the time is 7:00 PM;
 
-The Foundry is a room. "You enter the old industrial building, not sure what to expect. You saw the blog post of pictures of the space from a few months ago, and wondered if they were going to change it all. You look around and see that building is has been left more-or-less as the Andys found it." Inside from The Lot is The Foundry. The Foundry is in The Redd.
+The Foundry is a room. Inside from The Lot is The Foundry. The Foundry is in The Redd. "You enter the old industrial building, not sure what to expect. You saw the blog post of pictures of the space from a few months ago, and wondered if they were going to change it all. [paragraph break]You look around and see that building is has been left more-or-less as the Andys found it. The massive industrial press hulks over the hundreds of white chairs that have been lined up between the supporting beams. The lighting seems to designed to highlight, rather than hide, the scuffs and marks and general evidence that humans made things here."
 
 Before entering The Foundry:
-    if the player has a Conference Pass:
-        continue the action;
-    otherwise:
-        say "You need a conference pass. Sorry about that.";
-        stop the action.
+	if the player has a Conference Pass:
+		continue the action;
+	otherwise:
+		say "You need a conference pass. Sorry about that.";
+		stop the action.
+		
+[Instead of taking a seat:
+	say "You grab a chair, and get ready to listen."]
 
-Holocene is a room. Holocene is north of The Yale Union. Holocene is in Portland
+Holocene is a room. Holocene is north of The Yale Union. Holocene is in Portland.
 
 White Owl Social Club is a room. White Owl Social Club is south of The Lot. White Owl Social Club is in Portland.
 
-The Goat Field is a room. The Goat Field is east of The Lot. The Goat Field is in Portland.
+The Goat Field is a room. The Goat Field is east of The Lot. The Goat Field is in Portland. "Mere blocks from The Redd, a full city block has been left as grassy field. A small hill dominates one-half of the field, and a structure made of plywood and cast-offs occupies the other half. You see a small herd of goats in the field, some wandering around, some resting in the strange goat jungle gym, and some bleating at the fence for the food you must be carrying. You are intensely amused, and wish you could have goats back home."
 
-The Yale Union is a room. The Yale Union is north of The Lot. The Yale Union is in Portland.
+The Yale Union is a room. The Yale Union is north of The Lot. The Yale Union is in Portland. "You go up a thin metal staircase outside the brick building occupying the block just North of the goat field. You step through the doorway at the top of the stairs and enter into a space blank of decoration but filled with creativity."
 
 Section 4 - The Foundry Times
 
@@ -167,87 +171,105 @@ test sun_morn with "inside / outside / inside / outside / inside / outside / ins
 test sun_aft with "inside / outside / inside / outside / inside / outside / inside / outside / inside / outside / inside / outside"
 
 After going to The Foundry for the first time:
-    try looking;
-    now the time is 10:30 AM;
-    say "Friday Opening comments";
-    
+	try looking;
+	now the time is 10:30 AM;
+	say "It's Friday morning, and you're taking your seat to hear what the Andys have to say at the start of XOXO. Andy Baio and Andy MacMillan step up onto the stage. Andy Baio starts to speak.[paragraph break]";
+	say "'Welcome to XOXO!'";
+	say "The audience cheers wildly.";
+	
 After going to The Foundry for the second time:
-    now the time is 7:00 PM;
-    say "XOXO Story"
-    
+	now the time is 7:00 PM;
+	say "XOXO Story";
+	
 After going to The Foundry for the third time:
-    now the time is 10:30 AM;
-    say "Saturday Opening Comments";
-    
+	now the time is 10:30 AM;
+	say "Saturday Opening Comments";
+	
 After going to The Foundry for the fourth time:
-    now the time is 10:45 AM;
-    say "Kevin Kelly - Cool Tools";
-    
+	now the time is 10:45 AM;
+	say "Kevin Kelly - Cool Tools";
+	say "Kevin Kelly says: https://www.youtube.com/watch?v=i1cmnizKPlk";
+	
 After going to The Foundry for the fifth time:
-    now the time is 11:05 AM;
-    say "Gina Trapani - ThinkUp";
-    
+	now the time is 11:05 AM;
+	say "Gina Trapani - ThinkUp";
+	say "Gina Trapani says: https://www.youtube.com/watch?v=1da41x1vSPg";
+	
 After going to The Foundry for the sixth time:
-    now the time is 11:25 AM;
-    say "Golan Levin & Pablo Garcia - NeoLucida";
-    
+	now the time is 11:25 AM;
+	say "Golan Levin & Pablo Garcia - NeoLucida";
+	say "Golan & Pablo say: https://www.youtube.com/watch?v=VOOBjttbcaw";
+	
 After going to The Foundry for the seventh time:
-    now the time is 2:00 PM;
-    say "Ethan Diamond - Bandcamp";
-    
+	now the time is 2:00 PM;
+	say "Ethan Diamond - Bandcamp";
+	say "Ethan Says: https://www.youtube.com/watch?v=MaUkS-lr-ZM";
+	
 After going to The Foundry for the eighth time:
-    now the time is 2:20 PM;
-    say "Rachel Binx - Gifpop";
-    
+	now the time is 2:20 PM;
+	say "Rachel Binx - Gifpop";
+	say "Rachel Binx says: https://www.youtube.com/watch?v=AAmF2_20BNM";
+	
 After going to The Foundry for the ninth time:
-    now the time is 3:10 PM;
-    say "Jonathan Mann - Song a Day";
-    
+	now the time is 3:10 PM;
+	say "Jonathan Mann - Song a Day";
+	say "Jonathan Mann says: https://www.youtube.com/watch?v=nM4fGsyyWF0";
+	
 After going to The Foundry for the tenth time:
-    now the time is 3:30 PM;
-    say "Anita Sarkeesian - Feminist Frequency";
-    
+	now the time is 3:30 PM;
+	say "Anita Sarkeesian - Feminist Frequency";
+	say "Anita Sarkeesian says: https://www.youtube.com/watch?v=ah8mhDW6Shs";
+	
 After going to The Foundry for the eleventh time:
-    now the time is 4:20 PM;
-    say "John Gruber - Daring Fireball";
-    
+	now the time is 4:20 PM;
+	say "John Gruber - Daring Fireball";
+	say "https://www.youtube.com/watch?v=ufKFStaFsZs";
+	
 After going to The Foundry for the 12th time:
-    now the time is 7:00 PM;
-    say "XOXO Film & Animation";
-    
+	now the time is 7:00 PM;
+	say "XOXO Film & Animation";
+	
 After going to The Foundry for the 13th time:
-    now the time is 10:30 AM;
-    say "Sunday Opening Comments";
-    
+	now the time is 10:30 AM;
+	say "Sunday Opening Comments";
+	
 After going to The Foundry for the 14th time:
-    now the time is 10:45 AM;
-    say "Erin McKean - Wordnik";
-    
+	now the time is 10:45 AM;
+	say "Erin McKean - Wordnik";
+	say "Erin McKean says: https://www.youtube.com/watch?v=_sQjc3KFuAQ";
+	
 After going to The Foundry for the 15th time:
-    now the time is 11:05 AM;
-    say "Justin Hall - Links from the Underground";
-    
+	now the time is 11:05 AM;
+	say "Justin Hall - Links from the Underground";
+	say "Justin Hall says: https://www.youtube.com/watch?v=mE6xyFyv7xk";
+	
 After going to The Foundry for the 16th time:
-    now the time is 11:25 AM;
-    say "Joseph Fink - Welcome to Nightvale";
-    
+	now the time is 11:25 AM;
+	say "Joseph Fink - Welcome to Nightvale";
+	say "Jospeh Fink says: https://www.youtube.com/watch?v=nzsvuvcDrTc";
+	
 After going to The Foundry for the 17th time:
-    now the time is 2:00 PM;
-    say "Edna Piranha - Meatspace";
-    
+	now the time is 2:00 PM;
+	say "Edna Piranha - Meatspace";
+	say "Edna Piranha says: https://www.youtube.com/watch?v=0IUHlxWrYBw";
+	
 After going to The Foundry for the 18th time:
-    now the time is 2:20 PM;
-    say "Darius Kazemi - Tiny Subversions";
-    
+	now the time is 2:20 PM;
+	say "Darius Kazemi - Tiny Subversions";
+	say "Darius Kazemi says: https://www.youtube.com/watch?v=l_F9jxsfGCw";
+	
 After going to The Foundry for the 19th time:
-    now the time is 3:10 PM;
-    say "Leigh Alexander - Writer";
-    
+	now the time is 3:10 PM;
+	say "Leigh Alexander - Writer";
+	say "Leigh Alexander says: https://www.youtube.com/watch?v=LEOUSoRBsvQ"
+	
 After going to The Foundry for the 20th time:
-    now the time is 3:30 PM;
-    say "Hank Green - VlogBrothers";
-    
+	now the time is 3:30 PM;
+	say "Hank Green - VlogBrothers";
+	say "Hank Green says: https://www.youtube.com/watch?v=lPtopvsxmZY";
+	
 After going to The Foundry for the 21st time:
-    now the time is 4:20 PM;
-    say "Paul Ford - Writer";
+	now the time is 4:20 PM;
+	say "Paul Ford - Writer";
+	say "Paul Ford says: https://www.youtube.com/watch?v=WSL5qVL3Mng";
 
