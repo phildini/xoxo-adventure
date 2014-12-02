@@ -173,7 +173,7 @@ test sun_aft with "inside / outside / inside / outside / inside / outside / insi
 After going to The Foundry for the first time:
 	try looking;
 	now the time is 10:30 AM;
-	say "It's Friday morning, and you're taking your seat to hear what the Andys have to say at the start of XOXO. Andy Baio and Andy MacMillan step up onto the stage. Andy Baio starts to speak.[paragraph break]";
+	say "It's Friday morning, and you're taking your seat to hear what the Andys have to say at the start of XOXO. Andy Baio and Andy McMillan step up onto the stage. Andy Baio starts to speak.[paragraph break]";
 	say "'Welcome to XOXO!'";
 	say "The audience cheers wildly.";
 	
