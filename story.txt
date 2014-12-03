@@ -23,7 +23,7 @@ The description of the Twitter is "A small rounded cube. You hear the tweeting o
 
 The player is in the Office.
 
-The Registration is a room. The white door is north of the Office. Through the white door is the Registration. The white door is a door. "There is a white door here. You don't remember this white door having been in your office before. In fact, you're not sure how you got in your office. In fact, you're note sure if this is your office." The white door is lockable and locked. The white door is closed.
+The Registration is a room. The white door is north of the Office. Through the white door is the Registration. The white door is a door. "There is a white door here. You don't remember this white door having been in your office before. In fact, you're not sure how you got in your office. In fact, you're not sure if this is your office." The white door is lockable and locked. The white door is closed.
 
 Instead of taking the your laptop:
 	say "Your laptop is charging, you don't want to move it.";
